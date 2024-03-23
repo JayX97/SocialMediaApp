@@ -5,7 +5,7 @@ function Post() {
     const [likes, setLikes] = useState(0);
 
     const handleLike = () => {
-       setLikes(likes++);
+       setLikes(likes + 1);
     }
 
     return(
