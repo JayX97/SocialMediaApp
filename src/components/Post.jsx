@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import Comment from './Comment';
+import CreateCommentForm from './CreateCommentForm';
+import CommentFeed from './CommentFeed';
 
 function Post(props) {
     const [likes, setLikes] = useState(0);
+    const [comments, setComments] = useState([]);
 
     const handleLike = () => {
        setLikes(likes + 1);
     }
+
+    let handleNewSubmission = (data) => {
+        setComments([...comments, data]);
+    };
 
     return(
         <div>
@@ -15,9 +22,8 @@ function Post(props) {
             <p>Likes: {likes}</p>
             <button onClick={handleLike}>Like</button>
             <p>Comments:</p>
-            <Comment content="This is a test comment!" />
-            <Comment content="This is another test comment!" />
-            <Comment content="This is yet another test comment!" />
+            <CommentFeed comments={comments}/>
+            <CreateCommentForm onNewSubmit={handleNewSubmission}/>
         </div>
     )
 }
