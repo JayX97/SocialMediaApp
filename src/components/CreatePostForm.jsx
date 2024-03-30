@@ -1,6 +1,6 @@
 import react, { useState } from 'react';
 
-function CreatePostForm() {
+function CreatePostForm(props) {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
@@ -34,7 +34,7 @@ function CreatePostForm() {
             <textarea type="textarea" name="postContent" onChange={handleContentChange} value={content}></textarea>
             <br />
             <br />
-            <input type="submit" disabled={title === "" || content === ""}/>
+            <button type="submit" disabled={title === "" || content === ""}>Submit Post</button>
         </form>
     )
 };
