@@ -9,7 +9,7 @@ function Feed(props) {
 
     return(
         <div>
-            {postFeed.reverse()}
+            {postFeed}
         </div>
     );
 };

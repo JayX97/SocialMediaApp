@@ -10,7 +10,7 @@ function CommentFeed(props) {
 
     return(
         <div>
-            {commentFeed.reverse()}
+            {commentFeed}
         </div>
     );
 }
