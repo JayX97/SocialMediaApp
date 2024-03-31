@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Post from './components/Post';
 import CreatePostForm from './components/CreatePostForm';
 import Feed from './components/Feed';
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);

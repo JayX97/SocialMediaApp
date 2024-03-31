@@ -16,7 +16,7 @@ function Post(props) {
     };
 
     return(
-        <div>
+        <div class="post">
             <h2>{props.title}</h2>
             <h3>{props.content}</h3>
             <p>Likes: {likes}</p>

@@ -9,7 +9,7 @@ function CommentFeed(props) {
     });
 
     return(
-        <div>
+        <div class="comment-feed">
             {commentFeed}
         </div>
     );
